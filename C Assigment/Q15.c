@@ -1,30 +1,17 @@
+
 #include <stdio.h>
 
 int main() {
-    int n, r, k, s;
-    if (scanf("%d", &n) != 1) return 0;   
+    int n = 5;
 
-    if (n <= 0) {                      
-        printf("\n");
-        return 0;
-    }
-
-    
-    if (n > 13) n = 13;
-
-    for (r = 1; r <= n; r++) {
-        int total = 2 * r - 1;
-
-        
-        for (s = 0; s < 2 * (n - r); s++) putchar(' ');
-
-        
-        for (k = 0; k < total; k++) {
-            char ch = 'A' + k;            
-            putchar(ch);
-            if (k < total - 1) putchar(' ');
+    for (int i = 1; i <= n; i++) {                
+        for (int j = 1; j <= 2 * (n - i); j++) {   
+            printf(" ");
         }
-        putchar('\n');
+        for (int j = 0; j < 2 * i - 1; j++) {      
+            printf("%c ", 'A' + j);
+        }
+        printf("\n");                            
     }
 
     return 0;

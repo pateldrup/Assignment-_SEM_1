@@ -1,22 +1,13 @@
-#include<stdio.h>
-int main(){
+#include <stdio.h>
 
-  int n, i;
-    scanf("%d", &n);  
+int main() {
+    int n = 5;
 
-    for (i = 1; i <= n; i++) {
-        printf("%d", i);      
-        if (i < n) {
-            printf(" ");       
-        }
+    printf("1");
+
+    for (int i = 2; i <= n; i++) {
+        printf(" %d", i);
     }
-
-    printf("\n");   
-
-
-
-
-
 
     return 0;
 }

@@ -1,23 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    int n, i, j;
-    if (scanf("%d", &n) != 1) return 0;   
+    int n = 4;
 
-    if (n <= 0) {                         
-        printf("\n");
-        return 0;
-    }
-
-    if (n > 26) n = 26;
-
-    for (i = 0; i < n; i++) {
-        for (j = 0; j < n; j++) {
-            char ch = 'A' + j;            
-            printf("%c", ch);
-            if (j < n - 1) printf(" ");  
+    for (int i = 0; i < n; i++) {          
+        for (int j = 0; j < n; j++) {      
+            printf("%c ", 'A' + j);
         }
-        printf("\n");                     
+        printf("\n");  
     }
 
     return 0;
